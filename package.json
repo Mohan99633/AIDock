@@ -1,0 +1,74 @@
+{
+  "name": "aidock",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AIDock Chrome extension - One Dock. Every AI.",
+  "packageManager": "pnpm@11.17.0",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package",
+    "lint": "eslint . --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "e2e": "playwright test"
+  },
+  "dependencies": {
+    "@plasmohq/storage": "^1.15.0",
+    "@tanstack/react-query": "^5.83.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.542.0",
+    "plasmo": "^0.90.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^3.10.1",
+    "tailwind-merge": "^3.3.1",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "@types/chrome": "^0.1.8",
+    "@types/node": "^24.0.15",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "jsdom": "^26.1.0",
+    "postcss": "^8.5.6",
+    "prettier": "^3.6.2",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  },
+  "manifest": {
+    "name": "AIDock",
+    "description": "One Dock. Every AI.",
+    "version": "0.1.0",
+    "permissions": [
+      "storage",
+      "activeTab"
+    ],
+    "host_permissions": [
+      "https://chatgpt.com/*",
+      "https://claude.ai/*",
+      "https://gemini.google.com/*",
+      "https://www.perplexity.ai/*",
+      "https://copilot.microsoft.com/*",
+      "https://grok.com/*",
+      "https://poe.com/*",
+      "https://openrouter.ai/*"
+    ],
+    "action": {
+      "default_title": "AIDock",
+      "default_popup": "popup.html"
+    },
+    "options_page": "options.html"
+  }
+}
