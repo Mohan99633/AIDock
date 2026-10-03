@@ -89,7 +89,7 @@ export function SearchShell({ onNavigate }: { onNavigate: (tab: Tab) => void }):
   }, [results]);
 
   return (
-    <div className="flex flex-col h-full w-[380px] bg-background">
+    <div className="flex flex-col h-full w-full bg-background">
       <div className="flex items-center justify-between p-4 pb-3">
         <div className="flex items-center gap-2">
           <Search className="h-5 w-5 text-primary" />
@@ -99,7 +99,7 @@ export function SearchShell({ onNavigate }: { onNavigate: (tab: Tab) => void }):
 
       <div className="px-4 pb-3">
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 pointer-events-none text-muted-foreground" />
           <input
             type="search"
             value={query}
@@ -194,7 +194,7 @@ function ResultRow({
       onClick={onClick}
       className={cn(
         'group w-full text-left rounded-lg border border-border bg-card p-3 transition-colors',
-        'hover:border-primary/40 hover:bg-accent/30'
+        'hover:border-primary/40 hover:bg-muted/50'
       )}
     >
       <div className="flex items-center gap-2 mb-1">

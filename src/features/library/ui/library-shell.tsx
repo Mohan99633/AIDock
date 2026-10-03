@@ -8,6 +8,7 @@ import { canAddPrompt, freeUsageSummary } from '~/features/premium/lib/gating';
 import { useWorkspaceStore } from '~/features/workspaces/state/workspace-store';
 import type { Prompt, PromptCollection } from '~/infrastructure/storage/schema';
 import { Button } from '~/shared/ui/button';
+import { DropdownMenu } from '~/shared/ui/dropdown-menu';
 
 /** Scopes an item to the active workspace (unset = default workspace). */
 function belongsToWorkspace(workspaceId: string | undefined, activeWorkspaceId: string): boolean {
@@ -353,7 +354,7 @@ function PromptCard({
   }
 
   return (
-    <div className="group rounded-lg border border-border bg-card p-3 transition-colors hover:border-muted-foreground/30">
+    <div className="group rounded-lg border border-border bg-card p-3 transition-colors hover:border-primary/30">
       <div className="flex items-start justify-between gap-2">
         <div className="flex-1 min-w-0 cursor-pointer" onClick={() => setIsExpanded(!isExpanded)}>
           <div className="flex items-center gap-2">
@@ -380,11 +381,15 @@ function PromptCard({
             </span>
           </div>
         </div>
-        <div className="flex items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0">
-          <ActionButton Icon={Sparkles} label="Enhance" onClick={() => {}} />
-          <ActionButton Icon={Copy} label="Use" onClick={() => {}} />
-          <ActionButton Icon={Star} label="Favorite" onClick={onToggleFavorite} />
-          <ActionButton Icon={Trash2} label="Delete" onClick={onDelete} destructive />
+        <div className="flex items-center  flex-shrink-0">
+          <DropdownMenu
+            items={[
+              { label: 'Enhance', icon: Sparkles, onClick: () => {} },
+              { label: 'Use', icon: Copy, onClick: () => {} },
+              { label: 'Favorite', icon: Star, onClick: onToggleFavorite },
+              { label: 'Delete', icon: Trash2, onClick: onDelete, destructive: true }
+            ]}
+          />
         </div>
       </div>
       {isExpanded && (
@@ -417,32 +422,6 @@ function TagButton({ tag }: { tag: string }) {
   );
 }
 
-function ActionButton({
-  Icon,
-  label,
-  onClick,
-  destructive
-}: {
-  Icon: React.ElementType;
-  label: string;
-  onClick: () => void;
-  destructive?: boolean;
-}) {
-  return (
-    <button
-      title={label}
-      onClick={(e) => { e.stopPropagation(); onClick(); }}
-      className={cn(
-        'p-1.5 rounded-md transition-colors',
-        destructive
-          ? 'hover:bg-destructive/10 text-muted-foreground hover:text-destructive'
-          : 'hover:bg-muted text-muted-foreground hover:text-foreground'
-      )}
-    >
-      <Icon className="h-3.5 w-3.5" />
-    </button>
-  );
-}
 
 function CreatePromptDialog({
   onClose,

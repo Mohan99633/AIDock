@@ -307,7 +307,7 @@ function RunCard({ run }: { run: ModelRun }) {
         disabled={run.status !== 'success'}
         className={cn(
           'w-full flex items-center justify-between gap-2 p-3 text-left',
-          run.status === 'success' && 'cursor-pointer hover:bg-muted/30 transition-colors'
+          run.status === 'success' && 'cursor-pointer hover:bg-muted/50 transition-colors'
         )}
       >
         <div className="flex items-center gap-2 min-w-0">

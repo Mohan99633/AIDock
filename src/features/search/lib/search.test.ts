@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { searchAll, SearchInput } from './search';
+import type { SearchInput } from './search';
+import { searchAll } from './search';
 
 describe('searchAll', () => {
   const baseInput: SearchInput = {

@@ -126,7 +126,7 @@ function TemplateCard({ template, onClick }: { template: PromptTemplate; onClick
       onClick={onClick}
       className={cn(
         'group w-full text-left rounded-lg border border-border bg-card p-3 transition-colors',
-        'hover:border-primary/40 hover:bg-accent/30'
+        'hover:border-primary/40 hover:bg-muted/50'
       )}
     >
       <div className="flex items-center justify-between gap-2">

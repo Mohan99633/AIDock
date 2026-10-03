@@ -189,7 +189,7 @@ function ActivityTimeline({ history }: { history: PromptHistoryEntry[] }): JSX.E
         {history.slice(0, 10).map((entry, i) => (
           <div
             key={entry.id}
-            className="flex items-start gap-3 p-3 rounded-lg bg-card border border-border hover:bg-muted/50 transition-colors"
+            className="flex items-start gap-3 p-3 rounded-lg bg-card border border-border hover:bg-muted/50 hover:border-primary/30 transition-colors"
           >
             <div className="relative flex-shrink-0">
               <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
