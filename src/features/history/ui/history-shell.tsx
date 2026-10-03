@@ -5,7 +5,7 @@ import { cn } from '~/shared/lib/cn';
 import { storage, DEFAULT_WORKSPACE_ID } from '~/infrastructure/storage/storage.service';
 import { useWorkspaceStore } from '~/features/workspaces/state/workspace-store';
 import type { PromptHistoryEntry } from '~/infrastructure/storage/schema';
-import { Button } from '~/shared/ui/button';
+
 import { DropdownMenu } from '~/shared/ui/dropdown-menu';
 
 /** Scopes an item to the active workspace (unset = default workspace). */
