@@ -37,7 +37,7 @@ export function WorkspaceSwitcher({ onManage }: WorkspaceSwitcherProps): JSX.Ele
       {open && (
         <>
           <div className="fixed inset-0 z-10" onClick={() => setOpen(false)} />
-          <div className="absolute left-0 top-full z-20 mt-1 w-52 overflow-hidden rounded-lg border border-border bg-card shadow-premium">
+          <div className="absolute left-0 top-full z-20 mt-1 w-52 max-h-[80vh] overflow-y-auto overflow-x-hidden rounded-lg border border-border bg-card shadow-premium animate-in fade-in zoom-in-95 duration-100">
             <ul className="py-1">
               {workspaces.map((ws) => (
                 <li key={ws.id}>

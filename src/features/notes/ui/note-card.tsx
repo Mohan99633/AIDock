@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { cn } from '~/shared/lib/cn';
-import { Star, Trash2, Copy, Calendar } from 'lucide-react';
+import { Star, Trash2, Copy } from 'lucide-react';
 import { renderMarkdown } from '~/features/notes/lib/markdown';
 import { Button } from '~/shared/ui/button';
 import type { AINote } from '~/infrastructure/storage/schema';
@@ -21,7 +21,7 @@ export function NoteCard({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="group rounded-lg border border-border bg-card p-4 transition-colors hover:border-muted-foreground/30">
+    <div className="group rounded-lg border border-border bg-card p-4 transition-colors hover:border-primary/30">
       <div className="flex items-start justify-between gap-3 mb-2">
         <div className="flex-1 min-w-0">
           <h2 className="text-lg font-medium text-foreground truncate">

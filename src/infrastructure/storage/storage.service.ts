@@ -1,10 +1,11 @@
 import { getLocalValue, setLocalValue } from './local-store';
-import {
+import type {
   Prompt,
   AINote,
   PromptHistoryEntry,
   PromptCollection,
-  Workspace,
+  Workspace} from './schema';
+import {
   OBJECT_STORES
 } from './schema';
 

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import React from 'react';
+import type React from 'react';
 import { highlightText } from './highlight';
 
 /**
