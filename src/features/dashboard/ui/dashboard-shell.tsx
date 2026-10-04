@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
-import { LayoutDashboard, TrendingUp, Target, BarChart2, PieChart, Calendar, Zap, Brain } from 'lucide-react';
-import { cn } from '~/shared/lib/cn';
+import { LayoutDashboard, Target, PieChart, Zap, Brain } from 'lucide-react';
 import { StatTile } from './stat-tile';
 import { Sparkline } from './sparkline';
 import { BarChart } from './bar-chart';

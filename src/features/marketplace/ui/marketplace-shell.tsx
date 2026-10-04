@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useQueryClient } from '@tanstack/react-query';
 import { Search, Store, Star, Download, Check, X } from 'lucide-react';
 import { cn } from '~/shared/lib/cn';
 import { storage } from '~/infrastructure/storage/storage.service';

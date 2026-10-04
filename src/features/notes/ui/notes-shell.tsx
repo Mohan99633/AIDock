@@ -12,7 +12,6 @@ function belongsToWorkspace(workspaceId: string | undefined, activeWorkspaceId: 
   return (workspaceId ?? DEFAULT_WORKSPACE_ID) === activeWorkspaceId;
 }
 import { NoteCard } from './note-card';
-import { renderMarkdown } from '~/features/notes/lib/markdown';
 
 type View = 'all' | 'favorites';
 type SortBy = 'updatedAt' | 'createdAt' | 'title';

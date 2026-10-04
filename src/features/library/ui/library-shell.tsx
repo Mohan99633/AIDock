@@ -6,7 +6,7 @@ import { storage, DEFAULT_WORKSPACE_ID } from '~/infrastructure/storage/storage.
 import { useLicenseStore } from '~/features/premium/state/license-store';
 import { canAddPrompt, freeUsageSummary } from '~/features/premium/lib/gating';
 import { useWorkspaceStore } from '~/features/workspaces/state/workspace-store';
-import type { Prompt, PromptCollection } from '~/infrastructure/storage/schema';
+import type { Prompt } from '~/infrastructure/storage/schema';
 import { Button } from '~/shared/ui/button';
 import { DropdownMenu } from '~/shared/ui/dropdown-menu';
 
